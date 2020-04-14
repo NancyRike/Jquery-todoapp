@@ -1,0 +1,57 @@
+* body{
+    margin: 0 auto;
+    width: 70%;
+    text-transform: capitalize;
+
+}
+header{
+    background-color: rgb(50, 120, 201);
+    color: white;
+    
+    
+}
+.addbutton{
+    margin-left: 45em;
+    
+}
+header > div{
+    padding: 1em;
+    
+}
+ button{
+    background-color: rgb(50, 120, 201);
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer
+} 
+h1{
+    margin: 0;
+    text-align: center;  
+}
+#input{
+    width: 35em;
+    height: 2em;
+    font-size: 24px;
+    margin: 0px 5em;
+    text-align: center;
+    text-transform: capitalize;
+}
+.fa{
+   width: 1em;
+   height: 1em;
+   font-size: 30px; 
+}
+.fas{
+    width:1em;
+    height: 1em;
+    font-size:30px;
+}
+
+li{
+    padding-top: 1em;
+    text-decoration: none;
+    border-bottom: 1px dotted grey;
+    display: flex;
+    justify-content: space-around;
+   
+}
