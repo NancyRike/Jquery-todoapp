@@ -1,17 +1,26 @@
+// code block for header date
 var thedate = new Date();
 var arrangedate = thedate.toDateString();
-var timing = thedate.getHours() + ":" + thedate.getMinutes() + ":" + thedate.getSeconds();
 document.getElementById("todate").innerText = `Today ${arrangedate}`
- var output = input.value;
+// code block for input date
+let today = new Date().toISOString().substr(0, 10);
+// main jQuery code block
 $(document).ready(function(){
-   $('.addbutton').click(function(e){
-       e.preventDefault()
+   // using the add buttton
+   $('.addbutton').click(function(){
+      // setting empty value
     var output = $('#input').val();
     $(this).val(' ');   
-    $('ol').append('<li>'+ output + '<button class = "del">delete</button>' + ' ' + timing)
-
-     $('li').click(function(){
-         $(this).fadeOut(1000);
+   //  adding li, delete button, and dynamic date
+    $('ol').append('<li>'+ output + '<input id = "today" type = "datetime-local"> <button class = "del">delete</button>')
+    $("li").addClass("list")
+   // reseting the input field
+   $('input:text').click(function(){
+      $(this).val(' ');
+   });
+      // the delete button
+     $('.del').click(function(){
+        $(this).closest('.list').remove()
    })
    
 });
