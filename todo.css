@@ -29,11 +29,14 @@ h1{
     margin: 0;
     text-align: center;  
 }
+.inputcontainer{
+    display:flex;
+}
 #input{
     width: 35em;
     height: 2em;
     font-size: 24px;
-    margin: 0px 5em;
+    margin: 0px 0em;
     text-align: center;
     text-transform: capitalize;
 }
@@ -49,7 +52,7 @@ h1{
 }
 #today{
     border:none;
-
+  
 }
 li{
     padding-top: 1em;
