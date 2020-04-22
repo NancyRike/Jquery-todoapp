@@ -7,24 +7,32 @@ document.getElementById("todate").innerText = `Today ${arrangedate}`
 let today = new Date().toISOString().substr(0, 10);
 // main jQuery code block
 $(document).ready(function(){
+   // using the enterkey 
+   $('#input').keydown(function(event){
+      if (event.which == 13){
+         $('.addbutton').click();
+      } 
+      })
    // using the add buttton
    $('.addbutton').click(function(){
       // setting empty value
    var output = $('#input').val(); 
    $(this).val(' ');
-   var dating = $('#today').val();
-          
+   var date_pick = $('#today').val();
+            if( $('#input').val() == ' '){
+      alert("please add a todo")
+   }
+     else if ( $('#input').val() != ' '){
    //  adding li, delete button, and dynamic date
-    $('ol').append('<li>'+ output + dating + '<button class = "del">delete</button>')
+    $('ol').append('<li>'+ output+ " " + " " + date_pick + '<button class = "del">delete</button>')
     $("li").addClass("list")
    // reseting the input field
-   $('input:text').click(function(){
-      $(this).val(' ');
-   });
+   $('input:text').val(' ');
       // the delete button
      $('.del').click(function(){
         $(this).closest('.list').fadeOut(1000)
    })
-   
+     }   
+}); 
 });
-});
+
